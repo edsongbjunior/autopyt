@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Download 12 videos from the "the_top_10_best_cat_tiktoks_on_the_internet_1" subreddit
-youtube-dl $(curl -s -A "your bot 0.1" https://https://www.reddit.com/r/cats/hot.json?limit=12 | jq 
+youtube-dl $(curl -s -A "your bot 0.1" https://www.reddit.com/r/cats/hot.json?limit=12 | jq 
 '.' | grep url_overridden_by_dest | grep -Eoh "https:\/\/v\.redd\.it\/\w{13}")
 
 # Blur the videos and store them in the "blur" directory
